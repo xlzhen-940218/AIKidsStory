@@ -66,6 +66,7 @@
         app:layout_constraintTop_toTopOf="@+id/play_button_bg_image_view" />
 
     <ScrollView
+        android:id="@+id/story_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/bg_rounded_corners_translucent"

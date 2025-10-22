@@ -7,6 +7,7 @@ import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     private AppCompatImageView historyImageView;
     private AppCompatImageView settingsImageView;
+
+    private ScrollView scrollView;
 
     private ObjectAnimator alphaTextObjAnimator;
     private ObjectAnimator rotateButtonObjAnimator;
@@ -85,10 +88,12 @@ public class MainActivity extends AppCompatActivity {
 
         historyImageView = findViewById(R.id.history_image_view);
         settingsImageView = findViewById(R.id.settings_image_view);
+        scrollView = findViewById(R.id.story_scroll_view);
+
 
         translationYImageView(-100);
         translationYPlayImageView(-500);
-        ObjectAnimator.ofFloat(storyTextView, "alpha", 1, 0f)
+        ObjectAnimator.ofFloat(scrollView, "alpha", 1, 0f)
                 .setDuration(1000).start();
         generatorButtonTextView.setOnClickListener(v -> {
             if (generatorStory) {
@@ -98,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 mp.stop();
                 playButtonImageView.setImageResource(R.drawable.play_icon);
             }
-            ObjectAnimator.ofFloat(storyTextView, "alpha", storyTextView.getAlpha(), 0f)
+            ObjectAnimator.ofFloat(scrollView, "alpha", scrollView.getAlpha(), 0f)
                     .setDuration(1000).start();
             generatorStory = true;
             translationYImageView(-500);
@@ -131,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(String storyContent, String themeUsed) {
                 String display = getString(R.string.title) + themeUsed + "\n\n" + getString(R.string.story) + storyContent;
-                ObjectAnimator.ofFloat(storyTextView, "alpha", 0f, 1f)
+                ObjectAnimator.ofFloat(scrollView, "alpha", 0f, 1f)
                         .setDuration(1000).start();
                 storyTextView.setText(display);
                 //tvStory.setText(display);

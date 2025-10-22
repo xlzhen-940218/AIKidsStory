@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI Kids\' Stories</string>
+    <string name="generator_story">Generate Story</string>
+    <string name="father">Father</string>
+    <string name="mother">Mother</string>
+    <string name="talk_people">Narrator</string>
+    <string name="speak_speed">Speech Speed</string>
+    <string name="story_title">Story Topic</string>
+    <string name="story_time">2025/10/22 14:12:59</string>
+    <string name="title">Title: </string>
+    <string name="story">Story: </string>
+</resources>

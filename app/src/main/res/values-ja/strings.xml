@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AIおとぎ話</string>
+    <string name="generator_story">物語を生成</string>
+    <string name="father">父</string>
+    <string name="mother">母</string>
+    <string name="talk_people">ナレーター</string>
+    <string name="speak_speed">話速</string>
+    <string name="story_title">ストーリーのテーマ</string>
+    <string name="story_time">2025/10/22 14:12:59</string>
+    <string name="title">テーマ: </string>
+    <string name="story">物語: </string>
+</resources>

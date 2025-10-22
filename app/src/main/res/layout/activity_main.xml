@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/play_button_bg_image_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/play_story"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/play_button_image_view"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/play_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/play_button_bg_image_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/play_button_bg_image_view" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/settings_image_view"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/settings"
+        app:layout_constraintBottom_toBottomOf="@+id/play_button_bg_image_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/play_button_bg_image_view" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/history_image_view"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/history"
+        app:layout_constraintBottom_toBottomOf="@+id/play_button_bg_image_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/play_button_bg_image_view" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/generator_button_bg_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/play_button_bg_image_view">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/story_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rounded_corners_translucent"
+            android:minLines="20"
+            android:padding="10dp"
+            android:textColor="@color/gold_color" />
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/generator_button_bg_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-50dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/generator_button_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/generator_button_image_view"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:layout_marginBottom="118dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/generator_button"
+        app:layout_constraintBottom_toBottomOf="@+id/generator_button_bg_image_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/generator_button_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/generator_story"
+        android:textColor="@color/gold_color"
+        app:layout_constraintBottom_toBottomOf="@+id/generator_button_image_view"
+        app:layout_constraintLeft_toLeftOf="@+id/generator_button_image_view"
+        app:layout_constraintRight_toRightOf="@+id/generator_button_image_view"
+        app:layout_constraintTop_toTopOf="@+id/generator_button_image_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

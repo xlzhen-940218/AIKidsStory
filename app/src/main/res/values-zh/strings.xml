@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI儿童故事</string>
+    <string name="generator_story">生成故事</string>
+    <string name="father">父亲</string>
+    <string name="mother">母亲</string>
+    <string name="talk_people">讲述人</string>
+    <string name="speak_speed">语速</string>
+    <string name="story_title">故事主题</string>
+    <string name="story_time">2025/10/22 14:12:59</string>
+    <string name="title">主题: </string>
+    <string name="story">故事: </string>
+</resources>

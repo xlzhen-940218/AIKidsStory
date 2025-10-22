@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cuentos Infantiles con IA</string>
+    <string name="generator_story">Generar Cuento</string>
+    <string name="father">Padre</string>
+    <string name="mother">Madre</string>
+    <string name="talk_people">Narrador</string>
+    <string name="speak_speed">Velocidad de Voz</string>
+    <string name="story_title">Tema del Cuento</string>
+    <string name="story_time">2025/10/22 14:12:59</string>
+    <string name="title">Tema: </string>
+    <string name="story">Cuento: </string>
+</resources>

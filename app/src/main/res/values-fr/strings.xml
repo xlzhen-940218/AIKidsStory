@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Histoires pour Enfants IA</string>
+    <string name="generator_story">Générer l\'histoire</string>
+    <string name="father">Père</string>
+    <string name="mother">Mère</string>
+    <string name="talk_people">Narrateur</string>
+    <string name="speak_speed">Vitesse de la voix</string>
+    <string name="story_title">Thème de l\'histoire</string>
+    <string name="story_time">2025/10/22 14:12:59</string>
+    <string name="title">Titre: </string>
+    <string name="story">Histoire: </string>
+</resources>

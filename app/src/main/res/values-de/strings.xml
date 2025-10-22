@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KI-Kindergeschichten</string>
+    <string name="generator_story">Geschichte generieren</string>
+    <string name="father">Vater</string>
+    <string name="mother">Mutter</string>
+    <string name="talk_people">Erzähler</string>
+    <string name="speak_speed">Sprechgeschwindigkeit</string>
+    <string name="story_title">Storythema</string>
+    <string name="story_time">2025/10/22 14:12:59</string>
+    <string name="title">Thema: </string>
+    <string name="story">Geschichte: </string>
+</resources>

@@ -11,7 +11,7 @@ android {
         minSdk 26
         targetSdk 36
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -39,6 +39,6 @@ dependencies {
     androidTestImplementation libs.espresso.core
     implementation libs.okhttp
     implementation(libs.fastjson2)
-    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation libs.gson
     implementation(project(":edgetts"))
 }

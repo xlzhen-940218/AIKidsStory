@@ -3,6 +3,7 @@ package com.xlzhen.aikidsstory;
 import static android.animation.ValueAnimator.REVERSE;
 
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private ObjectAnimator alphaTextObjAnimator;
     private ObjectAnimator rotateButtonObjAnimator;
     private ObjectAnimator alphaButtonObjAnimator;
+    private ObjectAnimator playAnimator;
     private StoryGeneratorClient client;
     private String audioPath;
 
@@ -128,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         client.generateStoryAsync(new RequestStoryModel("", Locale.getDefault().toLanguageTag()), new StoryGeneratorClient.StoryCallback() {
             @Override
             public void onSuccess(String storyContent, String themeUsed) {
-                String display = getString(R.string.title) + themeUsed + "\n" + getString(R.string.story) + storyContent;
+                String display = getString(R.string.title) + themeUsed + "\n\n" + getString(R.string.story) + storyContent;
                 ObjectAnimator.ofFloat(storyTextView, "alpha", 0f, 1f)
                         .setDuration(1000).start();
                 storyTextView.setText(display);
@@ -245,17 +247,35 @@ public class MainActivity extends AppCompatActivity {
             });
         }
         if (mp.isPlaying()) {
+            playAnimator.cancel();
             playPause = true;
             mp.pause();
             playButtonImageView.setImageResource(R.drawable.play_icon);
             return;
         } else if (playPause) {
+            if (playAnimator != null) {
+                playAnimator.cancel();
+            }
+            playAnimator = ObjectAnimator.ofFloat(playButtonBackgroundImageView, "rotation", 0, 360)
+                    .setDuration(1000);
+            playAnimator.setRepeatMode(ValueAnimator.RESTART);
+            playAnimator.setRepeatCount(1000);
+            playAnimator.start();
+
             playPause = false;
             mp.start();
             playButtonImageView.setImageResource(R.drawable.pause_icon);
             return;
         }
         try {
+            if (playAnimator != null) {
+                playAnimator.cancel();
+            }
+            playAnimator = ObjectAnimator.ofFloat(playButtonBackgroundImageView, "rotation", 0, 360)
+                    .setDuration(10000);
+            playAnimator.setRepeatMode(ValueAnimator.RESTART);
+            playAnimator.setRepeatCount(1000);
+            playAnimator.start();
             playButtonImageView.setImageResource(R.drawable.pause_icon);
             mp.reset();
             mp.setDataSource(path);

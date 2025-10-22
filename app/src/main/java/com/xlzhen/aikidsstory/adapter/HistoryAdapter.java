@@ -1,10 +1,13 @@
 package com.xlzhen.aikidsstory.adapter;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.media.MediaPlayer;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.xlzhen.aikidsstory.R;
 import com.xlzhen.aikidsstory.adapter.base.GenericUniversalAdapter;
@@ -19,6 +22,7 @@ public class HistoryAdapter extends GenericUniversalAdapter<StoryModel> {
     private boolean playPause;
     private long playAudioId;
     private final float speed;
+    private ObjectAnimator animator;
 
     /**
      * 构造函数
@@ -74,6 +78,7 @@ public class HistoryAdapter extends GenericUniversalAdapter<StoryModel> {
             if (mp.isPlaying()) {
                 mp.stop();
             }
+
         }
 
         playAudioId = item.getId();
@@ -99,7 +104,29 @@ public class HistoryAdapter extends GenericUniversalAdapter<StoryModel> {
         timeView.setText(item.getTime());
         AppCompatImageView playButtonImageView = viewHolder.findViewById(R.id.play_button_image_view);
         playButtonImageView.setImageResource(item.isPlaying() ? R.drawable.pause_icon : R.drawable.play_icon);
+        AppCompatImageView playButtonBgImageView = viewHolder.findViewById(R.id.play_button_bg_image_view);
+        if( playAudioId == item.getId()) {
+            if (item.isPlaying()) {
+                if (animator != null) {
+                    animator.cancel();
+                }
+                animator = ObjectAnimator.ofFloat(playButtonBgImageView, "rotation", 0, 360)
+                        .setDuration(10000);
+                animator.setRepeatMode(ValueAnimator.RESTART);
+                animator.setRepeatCount(1000);
+                animator.start();
+            } else {
+                if (animator != null) {
+                    animator.cancel();
+                }
+                animator = null;
+            }
+        }
         playButtonImageView.setOnClickListener(v -> {
+            for (StoryModel model : dataList) {
+                model.setPlaying(false);
+            }
+
             audioPlayer(item);
             notifyDataSetChanged();
         });

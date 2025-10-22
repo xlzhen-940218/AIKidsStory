@@ -68,6 +68,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@drawable/bg_rounded_corners_translucent"
+        android:layout_margin="10dp"
         app:layout_constraintBottom_toTopOf="@+id/generator_button_bg_image_view"
         app:layout_constraintTop_toBottomOf="@+id/play_button_bg_image_view">
 
@@ -75,8 +77,6 @@
             android:id="@+id/story_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bg_rounded_corners_translucent"
             android:minLines="20"
             android:padding="10dp"
             android:textColor="@color/gold_color" />

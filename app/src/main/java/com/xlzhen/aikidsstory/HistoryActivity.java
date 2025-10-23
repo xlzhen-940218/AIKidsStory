@@ -33,9 +33,4 @@ public class HistoryActivity extends BaseActivity <ActivityHistoryBinding, Histo
         }
     }
 
-    @Override
-    protected boolean isNotificationBarTextBlack() {
-        return false;
-    }
-
 }

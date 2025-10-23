@@ -2,10 +2,12 @@ package com.xlzhen.mvvm.activity;
 
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowInsetsController;
 import android.view.WindowManager;
 
 import androidx.activity.EdgeToEdge;
@@ -120,6 +122,29 @@ public abstract class BaseActivity<K extends ViewDataBinding, V extends BaseActi
         }
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(Color.TRANSPARENT);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) { // Android 11+
+            WindowInsetsController controller = window.getInsetsController();
+            if (controller != null) {
+                // 设置沉浸/全屏的显示行为
+                controller.setSystemBarsBehavior(WindowInsetsController.BEHAVIOR_DEFAULT);
+
+                if (!isNotificationBarTextBlack()) {
+                    // 需要黑色字体/图标 (适用于浅色背景)
+                    controller.setSystemBarsAppearance(
+                            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+                            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+                    );
+                } else {
+                    // 需要白色字体/图标 (适用于深色背景)
+                    // 关键：清除 LIGHT_STATUS_BARS 外观标志，使字体变亮色（白色）
+                    controller.setSystemBarsAppearance(
+                            0, // 想要清除的标志
+                            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS // 目标标志
+                    );
+                }
+            }
+        }
     }
 
     @Override

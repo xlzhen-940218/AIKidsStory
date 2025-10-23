@@ -315,8 +315,4 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainActivity
         }
     }
 
-    @Override
-    protected boolean isNotificationBarTextBlack() {
-        return false;
-    }
 }

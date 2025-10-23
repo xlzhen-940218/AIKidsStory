@@ -56,5 +56,5 @@ public class SettingsActivity extends BaseActivity<ActivitySettingsBinding, Sett
         return ActivitySettingsBinding.inflate(getLayoutInflater());
     }
 
-   
+
 }

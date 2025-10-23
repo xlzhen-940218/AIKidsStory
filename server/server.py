@@ -6,6 +6,7 @@ import time
 
 from flask import Flask, request, jsonify
 from openai import OpenAI
+from waitress import serve
 
 # =================================================================
 # 1. 配置和初始化
@@ -72,9 +73,10 @@ You are an expert children's story writer, specializing in creating narratives f
 Your stories must adhere to the following strict rules:
 1. **Safety and Positivity**: The story must be entirely positive, optimistic, safe, and absolutely must not contain any violence, fear, adult themes, pornography, politics, religion, negative emotions (like excessive sadness, despair), discrimination, or any content unsuitable for children.
 2. **Themes**: Stories should focus on friendship, kindness, courage, exploration, learning new things, solving simple problems, or the beauty of nature.
-3. **Language**: Use simple, clear, and lively language with sentence structures that are easy for children to understand.
-4. **Length**: The story should be between 500 and 800 words (medium length).
-5. **Format**: Output only the story itself, without any opening remarks (like "Okay, here is a story") or concluding remarks (like "Hope you enjoyed it").
+3. **Vividness & Narrative Arc (NEW)**: The story must be lively and descriptive, using engaging action verbs and sensory details. It must follow a clear story structure: **Introduction** (setting and character), **Rising Action** (a simple problem/challenge), **Climax** (solving the problem), and **Resolution** (a happy ending and lesson learned). Include simple, age-appropriate dialogue to make characters engaging.
+4. **Language**: Use simple, clear, and lively language, easy for children to understand.
+5. **Length**: The story should be between 500 and 800 words (medium length).
+6. **Format**: Output only the story itself, without any opening remarks (like "Okay, here is a story") or concluding remarks (like "Hope you enjoyed it").
 """
 
 
@@ -94,8 +96,8 @@ def get_theme_system_prompt(language_name):
     """
     return f"""
     You are a creative children's story theme generator. Generate an interesting, positive story theme or requirement suitable for children aged 4-8.
-    The theme must be a single sentence, focusing on positive, imaginative elements.
-    Examples in English: "The adventure of a small turtle who wants to fly to the moon," or "A story about a talking rainbow candy."
+    The theme must be a single sentence, focusing on positive, imaginative elements and a clear **action or challenge**.
+    Examples in English: "The adventure of a small turtle who wants to fly to the moon by building a balloon," or "A story about a talking rainbow candy who must convince the sun not to melt his friends."
 
     **CRITICAL RULE**: The output theme MUST be written in {language_name}.
     Output only the theme content directly, without any additional modifiers or explanations.
@@ -198,7 +200,7 @@ def generate_story():
         response = client.chat.completions.create(
             model=MODEL_NAME,
             messages=messages,
-            temperature=0.7,
+            temperature=0.9,
             max_tokens=1000
         )
 
@@ -236,4 +238,4 @@ if __name__ == '__main__':
     else:
         print("服务器启动，但 API 客户端未初始化。请检查 API Key。")
 
-    app.run(host='0.0.0.0', port=18080, debug=True)
+    serve(app, host='0.0.0.0', port=18080)

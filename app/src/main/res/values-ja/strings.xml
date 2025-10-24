@@ -10,4 +10,8 @@
     <string name="story_time">2025/10/22 14:12:59</string>
     <string name="title">テーマ: </string>
     <string name="story">物語: </string>
+    <string name="delete_story">この物語を削除しますか？</string>
+    <string name="confirm">確定</string>
+    <string name="cancel">キャンセル</string>
+
 </resources>

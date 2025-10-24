@@ -47,7 +47,7 @@
             android:textColor="@android:color/black"
             android:textSize="14sp"
             app:layout_constraintLeft_toRightOf="@+id/play_button_bg_image_view"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/delete_button_view"
             app:layout_constraintTop_toTopOf="@+id/play_button_image_view" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -60,6 +60,17 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/play_button_image_view"
             app:layout_constraintLeft_toRightOf="@+id/play_button_bg_image_view"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toLeftOf="@+id/delete_button_view" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete_button_view"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/play_button_image_view"
+            app:layout_constraintBottom_toBottomOf="@+id/play_button_image_view"
+            android:src="@mipmap/delete"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

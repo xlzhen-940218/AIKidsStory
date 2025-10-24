@@ -256,8 +256,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainActivity
         // 历史和设置按钮的逻辑
         float targetY = (playTranslationY == TRANSLATION_Y_PLAY_HIDDEN) ? playTranslationY : TRANSLATION_Y_PLAY_VISIBLE;
 
-        startTranslationYAnimator(binding.historyImageView, binding.historyImageView.getTranslationY(), targetY, immediate);
-        startTranslationYAnimator(binding.settingsImageView, binding.settingsImageView.getTranslationY(), targetY, immediate);
+        //startTranslationYAnimator(binding.historyImageView, binding.historyImageView.getTranslationY(), targetY, immediate);
+        //startTranslationYAnimator(binding.settingsImageView, binding.settingsImageView.getTranslationY(), targetY, immediate);
 
         lastPlayTranslationY = playTranslationY;
     }

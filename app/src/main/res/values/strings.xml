@@ -10,4 +10,7 @@
     <string name="story_time">2025/10/22 14:12:59</string>
     <string name="title">Title: </string>
     <string name="story">Story: </string>
+    <string name="delete_story">Delete this story?</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
 </resources>

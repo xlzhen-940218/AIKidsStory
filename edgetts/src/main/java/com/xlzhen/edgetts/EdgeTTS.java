@@ -26,19 +26,19 @@ public class EdgeTTS {
 
     private static String getString(String language, boolean man) {
         String ttsName;
-        if (language.equals("ja-JP")) {
+        if (language.startsWith("ja")) {
             ttsName = man ? "ja-JP-KeitaNeural" : "ja-JP-NanamiNeural";
-        } else if (language.equals("en-US") || language.equals("zh-CN")) {
+        } else if (language.startsWith("en") || language.startsWith("zh")) {
             ttsName = man ? "zh-CN-YunyangNeural" : "zh-CN-XiaoxiaoNeural";
-        } else if (language.equals("pt-BR")) {
+        } else if (language.startsWith("pt")) {
             ttsName = man ? "pt-BR-AntonioNeural" : "pt-BR-FranciscaNeural";
-        } else if (language.equals("es-ES")) {
+        } else if (language.startsWith("es")) {
             ttsName = man ? "es-ES-AlvaroNeural" : "es-ES-ElviraNeural";
-        } else if (language.equals("it-IT")) {
+        } else if (language.startsWith("it")) {
             ttsName = man ? "it-IT-DiegoNeural" : "it-IT-ElsaNeural";
-        } else if (language.equals("de-DE")) {
+        } else if (language.startsWith("de")) {
             ttsName = man ? "de-DE-ConradNeural" : "de-DE-KatjaNeural";
-        } else if (language.equals("fr-FR")) {
+        } else if (language.startsWith("fr")) {
             ttsName = man ? "fr-FR-HenriNeural" : "fr-FR-EloiseNeural";
         } else {
             ttsName = man ? "zh-CN-YunyangNeural" : "zh-CN-XiaoxiaoNeural";

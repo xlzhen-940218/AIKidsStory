@@ -22,9 +22,9 @@
 
 #### 📸 应用截图 (App Screenshots - 8种语言界面展示)
 
-| 中文界面 | 英文界面 | 德语界面 | 法语界面 | 西语界面 | 日语界面 | 葡语界面 | 意语界面 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [在此处放置截图链接/图片] | [在此处放置截图链接/图片] | [在此处放置截图链接/图片] | [在此处放置截图链接/图片] | [在此处放置截图链接/图片] | [在此处放置截图链接/图片] | [在此处放置截图链接/图片] | [在此处放置截图链接/图片] |
+|                中文界面                 | 英文界面 | 德语界面 | 法语界面 | 西语界面 | 日语界面 | 葡语界面 | 意语界面 |
+|:-----------------------------------:| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="Screenshots/Screenshot_CN.png" alt="中文" width="200" height="300"> | <img src="Screenshots/Screenshot_EN.png" alt="英文" width="200" height="300"> | <img src="Screenshots/Screenshot_DE.png" alt="德语" width="200" height="300"> | <img src="Screenshots/Screenshot_FR.png" alt="法语" width="200" height="300"> | <img src="Screenshots/Screenshot_ES.png" alt="西语" width="200" height="300"> | <img src="Screenshots/Screenshot_JP.png" alt="日语" width="200" height="300"> | <img src="Screenshots/Screenshot_PT.png" alt="葡语" width="200" height="300"> | <img src="Screenshots/Screenshot_IT.png" alt="意大利语" width="200" height="300"> |
 
 #### 💻 技术栈
 

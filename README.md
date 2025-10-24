@@ -8,7 +8,7 @@
 
 * **智能故事创作**：由 AI (基于 DeepSeek) 随机生成或根据主题定制**高质量**、**故事性强**的儿童故事（已修复流水账问题）。
 * **多语言支持**：根据客户端请求，生成中文、英文、德文、法文等多种语言的故事。
-* **故事语音播放**：支持将生成的故事内容转换为语音（TTS）。
+* **故事语音播放**：支持将生成的故事内容转换为语音（[TTS](https://github.com/WhiteMagic2014/tts-edge-java)）。
 * **个性化设置**：可切换男声/女声，并调节语速。
 * **历史记录**：保存生成的故事列表，并支持**删除管理**。
 * **沉浸式 UI**：全屏显示，状态栏文字颜色与黑色背景融合，提供统一视觉体验。
@@ -47,7 +47,7 @@
 
 * **Smart Story Creation**: AI (DeepSeek-based) generates **high-quality**, **well-structured** children's stories (monotonous narratives fixed). Can be random or theme-based.
 * **Multilingual Support**: Generates stories in various languages including Chinese, English, German, French, etc., based on client requests.
-* **Story Voice Playback**: Supports Text-to-Speech (TTS) conversion for generated stories.
+* **Story Voice Playback**: Supports Text-to-Speech ([TTS](https://github.com/WhiteMagic2014/tts-edge-java)) conversion for generated stories.
 * **Personalized Settings**: Switch between male/female voices and adjust speech speed.
 * **History Management**: Saves generated stories with a new **delete function** for easy management.
 * **Immersive UI**: Full-screen display with the status bar text color fused with the dark background for a unified look.
@@ -80,7 +80,7 @@
 
 * **Intelligente Story-Erstellung**: Die KI (basierend auf DeepSeek) generiert **hochwertige**, **gut strukturierte** Kindergeschichten (monotone Erzählungen behoben). Kann zufällig oder themenbasiert sein.
 * **Mehrsprachige Unterstützung**: Erstellt Geschichten in verschiedenen Sprachen, einschließlich Deutsch, Englisch, Französisch usw., basierend auf Client-Anfragen.
-* **Sprachwiedergabe**: Unterstützt Text-to-Speech (TTS) für generierte Geschichten.
+* **Sprachwiedergabe**: Unterstützt Text-to-Speech ([TTS](https://github.com/WhiteMagic2014/tts-edge-java)) für generierte Geschichten.
 * **Personalisierte Einstellungen**: Wechseln Sie zwischen männlicher/weiblicher Stimme und passen Sie die Sprechgeschwindigkeit an.
 * **Verlaufverwaltung**: Speichert generierte Geschichten mit einer neuen **Löschfunktion** zur einfachen Verwaltung.
 * **Immersive Benutzeroberfläche**: Vollbildanzeige mit der Statusleistentextfarbe, die mit dem dunklen Hintergrund verschmilzt, für einen einheitlichen Look.
@@ -96,7 +96,7 @@
 
 * **Création Intelligente d'Histoires**: L'IA (basée sur DeepSeek) génère des histoires pour enfants **de haute qualité**, **bien structurées** (narrations monotones corrigées). Peut être aléatoire ou basée sur un thème.
 * **Support Multilingue**: Génère des histoires en différentes langues, y compris le français, l'anglais, l'allemand, etc., basées sur les requêtes du client.
-* **Lecture Vocale**: Prend en charge la conversion Texte-Parole (TTS) pour les histoires générées.
+* **Lecture Vocale**: Prend en charge la conversion Texte-Parole ([TTS](https://github.com/WhiteMagic2014/tts-edge-java)) pour les histoires générées.
 * **Paramètres Personnalisés**: Basculez entre les voix masculines/féminines et ajustez la vitesse de la parole.
 * **Gestion de l'Historique**: Sauvegarde les histoires générées avec une nouvelle **fonction de suppression** pour une gestion facile.
 * **Interface Utilisateur Immersive**: Affichage plein écran avec la couleur du texte de la barre d'état fusionnée avec l'arrière-plan sombre pour un look unifié.
@@ -112,7 +112,7 @@
 
 * **Creación Inteligente de Historias**: La IA (basada en DeepSeek) genera historias infantiles **de alta calidad** y **bien estructuradas** (narrativas monótonas corregidas). Puede ser aleatoria o basada en un tema.
 * **Soporte Multilingüe**: Genera historias en varios idiomas, incluidos español, inglés, alemán, francés, etc., según las solicitudes del cliente.
-* **Reproducción de Voz**: Admite la conversión de Texto a Voz (TTS) para las historias generadas.
+* **Reproducción de Voz**: Admite la conversión de Texto a Voz ([TTS](https://github.com/WhiteMagic2014/tts-edge-java)) para las historias generadas.
 * **Configuración Personalizada**: Cambie entre voces masculinas/femeninas y ajuste la velocidad del habla.
 * **Gestión del Historial**: Guarda las historias generadas con una nueva **función de eliminación** para una fácil gestión.
 * **Interfaz de Usuario Inmersiva**: Pantalla completa con el color del texto de la barra de estado fusionado con el fondo oscuro para una apariencia unificada.
@@ -128,7 +128,7 @@
 
 * **スマートストーリー作成**: AI (DeepSeek ベース) が、**高品質**で**物語性のある**児童向けストーリーを生成します（単調なナレーションの問題は修正済み）。ランダムまたはテーマに基づいて作成可能です。
 * **多言語サポート**: クライアントのリクエストに基づき、日本語、英語、ドイツ語、フランス語など、様々な言語のストーリーを生成します。
-* **ストーリー音声再生**: 生成されたストーリーのテキストを音声（TTS）に変換して再生をサポートします。
+* **ストーリー音声再生**: 生成されたストーリーのテキストを音声（[TTS](https://github.com/WhiteMagic2014/tts-edge-java)）に変換して再生をサポートします。
 * **パーソナライズ設定**: 男性/女性の声を切り替えたり、話す速度を調整したりできます。
 * **履歴管理**: 生成されたストーリーを保存し、簡単な管理のための新しい**削除機能**が追加されました。
 * **没入型 UI**: ステータスバーのテキスト色が暗い背景と融合したフルスクリーン表示で、統一感のある外観を提供します。
@@ -160,7 +160,7 @@
 
 * **Creazione Intelligente di Storie**: L'IA (basata su DeepSeek) genera storie per bambini **di alta qualità** e **ben strutturate** (narrative monotone corrette). Può essere casuale o basata su un tema.
 * **Supporto Multilingue**: Genera storie in varie lingue, tra cui italiano, inglese, tedesco, francese, ecc., in base alle richieste del client.
-* **Riproduzione Vocale**: Supporta la conversione Testo-Voce (TTS) per le storie generate.
+* **Riproduzione Vocale**: Supporta la conversione Testo-Voce ([TTS](https://github.com/WhiteMagic2014/tts-edge-java)) per le storie generate.
 * **Impostazioni Personalizzate**: Passa tra voci maschili/femminili e regola la velocità del parlato.
 * **Gestione della Cronologia**: Salva le storie generate con una nuova **funzione di eliminazione** per una facile gestione.
 * **Interfaccia Utente Immersiva**: Visualizzazione a schermo intero con il colore del testo della barra di stato fuso con lo sfondo scuro per un aspetto unificato.
